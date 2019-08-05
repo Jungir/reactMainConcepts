@@ -18,15 +18,16 @@
             name : 'Ryu',
             age : 35
         }
-        handleClick(e){
+        handleClick = (e) => {
             // console.log(e.target);
-            console.log(this.state);
-            
+            this.setState({name: 'Yoshi'}, function () {
+                console.log(this.state);
+            });
         }
-        handleMouseOver(e){
-            console.log(e.target, e.pageX, e.pageY);
+        handleMouseOver = (e) =>{
+            this.setState({name: "kal l"})
         }
-        handleCopy(e){
+        handleCopy = (e) =>{
             console.log('try being origional for once');
         }
         render(){
@@ -40,7 +41,7 @@
                 </div>
             );
         }
-        }
+    }
         ReactDOM.render(<App/>, document.getElementById('app'));
     </script>
 </body>
