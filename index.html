@@ -13,11 +13,16 @@
     <div id="app"></div>
     <script type="text/babel">
         class App extends React.Component{
+            // inital stage of the component, when it loads initally
+            state = {
+            name : 'Ryu',
+            age : 35
+        }
             render(){
                 return (
                     <div className='app-content'> 
                         <h1>Hello</h1>
-                        <p>{ Math.round(Math.random()*10) }</p>
+                        <p>my name is: {this.state.name} and i'm {this.state.age}</p>
                     </div>
                 );
             }
