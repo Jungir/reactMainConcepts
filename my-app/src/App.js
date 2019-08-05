@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Ninjas from './Ninjas';
-
+//container/class component built with a class;
 class App extends Component{
   state = {
     ninjas : [
