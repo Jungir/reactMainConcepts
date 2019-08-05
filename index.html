@@ -18,14 +18,28 @@
             name : 'Ryu',
             age : 35
         }
-            render(){
-                return (
-                    <div className='app-content'> 
-                        <h1>Hello</h1>
-                        <p>my name is: {this.state.name} and i'm {this.state.age}</p>
-                    </div>
-                );
-            }
+        handleClick(e){
+            // console.log(e.target);
+            console.log(this.state);
+            
+        }
+        handleMouseOver(e){
+            console.log(e.target, e.pageX, e.pageY);
+        }
+        handleCopy(e){
+            console.log('try being origional for once');
+        }
+        render(){
+            return (
+                <div className='app-content'> 
+                    <h1>Hello</h1>
+                    <p>my name is: {this.state.name} and i'm {this.state.age}</p>
+                    <button onClick={this.handleClick}>Clikc me</button>
+                    <button onMouseOver={this.handleMouseOver}>Hover Me</button>
+                    <p onCopy={this.handleCopy}>What we think we become</p>
+                </div>
+            );
+        }
         }
         ReactDOM.render(<App/>, document.getElementById('app'));
     </script>
