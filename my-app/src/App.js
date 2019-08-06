@@ -12,17 +12,29 @@ class App extends Component{
   }
   addNinja = (newNinja) => {
     newNinja['id'] = Math.random();
+    //spreading the origninal array,adding newNinja to it
+    //mutating the original array but first making copy of it
     let ninjas = [...this.state.ninjas, newNinja];
     this.setState({
       ninjas : ninjas
     });
+  }
+  deleteNinja = (id) => {
+    // console.log(id);
+    let ninjas = this.state.ninjas.filter((curNinja) => {
+      return curNinja.id !== id;
+    });
+    this.setState({
+      ninjas : ninjas
+    });
+    
   }
   render(){
     return (
       <div className="App">
         <h1>My first react app</h1>
         <p>Welcome</p>
-        <Ninjas ninjas={this.state.ninjas}/> 
+        <Ninjas ninjas={this.state.ninjas} deleteNinja={this.deleteNinja}/> 
         <FormNinja addNinja = {this.addNinja}/>
       </div>
     );
