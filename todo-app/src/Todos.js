@@ -7,7 +7,7 @@ const Todos = function  (props) {
             return (
                 <div key={todo.id} className="collection-item">
                     <span>{todo.content}</span>
-                    <button onClick={()=> {deleteTodo(todo.id)}}>delete</button>
+                    <button className="delete btn-floating btn-small waves-effect waves-light red" onClick={()=> {deleteTodo(todo.id)}}><i className="material-icons">delete</i></button>
                 </div>
             )
         })
