@@ -5,13 +5,17 @@ class TodoForm extends Component {
         content: ''
     }
     handleChange = (e) => {
-        this.setState({[e.target.id]: e.target.value});
+        if(e.target.value.length >= 1){
+            this.setState({[e.target.id]: e.target.value});
+        }
     }
     handleSubmit = (e) => {
         e.preventDefault();
         // console.log(this.state);
-        this.props.addTodo(this.state);
-        this.setState({content: ''});
+        if(this.state.content.length >= 1){
+            this.props.addTodo(this.state);
+            this.setState({content: ''});
+        }
     }
     render(){
         return (
