@@ -1,4 +1,5 @@
 import React from 'react';
+import './Ninjas.css'
 //UI/functional component
 //statelss component data is recieved through the "parameter" from conatainer/parent component
 //can destructure directly in the functions: function({ninjas});

@@ -1,0 +1,9 @@
+body{
+    background: grey;
+    opacity: 1;
+    color: #fff;
+}
+.ninja form {
+    background: #fff;
+    padding: 5rem;
+}
