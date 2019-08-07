@@ -24,7 +24,7 @@ class Home extends Component {
         ) : (<div className="center">No posts yet</div>);
         return (
         <div className="container home">
-            <h4>Home</h4>
+            <h4 className="center">Home</h4>
             {postList}
         </div>)
     }
