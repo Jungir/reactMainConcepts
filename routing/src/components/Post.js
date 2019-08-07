@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
+import {deletePost} from '../actions/postAction';
 class Post extends Component {
   //connecting ro redux store
   handleClick = () =>{
@@ -37,7 +38,7 @@ const mapStateToProps = (state, ownProps) =>{
 const mapDispatchToProps = (dispatch) => {
     return {
         deletePost: (id) => {
-            return dispatch({type : 'DELETE_POST', id: id});
+            return dispatch(deletePost(id));
         }
     }
 }
