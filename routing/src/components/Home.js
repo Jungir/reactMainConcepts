@@ -5,7 +5,7 @@ import { connect} from 'react-redux';
 class Home extends Component {
    //now storing data & getting them through redux
     render(){
-        console.log(this.props);
+        // console.log(this.props);
         
         const {posts} = this.props;
         const postList = posts.length ? (
