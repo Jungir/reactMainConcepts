@@ -35,9 +35,10 @@ const mapStateToProps = (state, ownProps) =>{
         })
     };
 }
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = function(dispatch){
     return {
-        deletePost: (id) => {
+        deletePost: function (id) {
+            // returns a command/action to give to the reducer;
             return dispatch(deletePost(id));
         }
     }
